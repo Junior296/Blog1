@@ -31,7 +31,7 @@ ALLOWED_HOSTS = ['.vercel.app','now.sh','127.0.0.1','localhost']
 # Application definition
 
 INSTALLED_APPS = [
-    "blog.apps.BlogConfig",
+    "blog",
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -78,15 +78,10 @@ WSGI_APPLICATION = 'personal_blog.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'railway',
-        'USER': 'postgres',
-        'PASSWORD': '41BEfE*GA-13ae64A2Ef21Cf6c35GEge',
-        'HOST': 'monorail.proxy.rlwy.net',
-        'PORT': '42523',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
